@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-123</title>
+  <meta name="description" content="sf-t3-1779642675702-123에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-123.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RAW CONCRETE BRUTALIST SYSTEM */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+ background: #1a1a1a;
+ color: #e5e5e5;
+ line-height: 1.4;
+ overflow-x: hidden;
+ }
+ img, svg { display: block; max-width: 100%; }
+ a { color: #ff6b35; text-decoration: underline; text-underline-offset: 4px; }
+ a:hover { background: #ff6b35; color: #1a1a1a; }
+ h1, h2, h3, h4 { font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', system-ui, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; }
+ h1 { font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; margin-bottom: 1rem; }
+ h2 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 0.95; margin-bottom: 0.75rem; border-left: 6px solid #ff6b35; padding-left: 20px; }
+ h3 { font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1; margin-bottom: 0.5rem; }
+ p { margin-bottom: 1.2rem; font-size: 1.1rem; max-width: 72ch; }
+ .container { padding: 48px 24px; max-width: 1400px; margin: 0 auto; }
+ .full-bleed { width: 100vw; margin-left: calc(-50vw + 50%); padding-left: 24px; padding-right: 24px; }
+ 
+ /* BORDERS & TEXTURE */
+ .brutal-border { border: 4px solid #e5e5e5; }
+ .brutal-border-accent { border: 4px solid #ff6b35; }
+ .brutal-skew { transform: rotate(-2deg); }
+ .brutal-skew-rev { transform: rotate(2deg); }
+ .bg-noise {
+ background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 4px);
+ }
+ 
+ /* HEADER / NAV */
+ header {
+ background: #1a1a1a;
+ border-bottom: 4px solid #ff6b35;
+ padding: 16px 24px;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1400px;
+ margin: 0 auto;
+ }
+ .logo {
+ font-family: Impact, 'Arial Black', sans-serif;
+ font-size: 2rem;
+ color: #ff6b35;
+ text-transform: uppercase;
+ letter-spacing: -0.03em;
+ transform: rotate(-1deg);
+ display: inline-block;
+ }
+ .logo a { color: #ff6b35; text-decoration: none; }
+ .logo a:hover { background: transparent; color: #e5e5e5; }
+ 
+ .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+ .nav-links a { color: #e5e5e5; text-decoration: none; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 12px; border: 2px solid transparent; }
+ .nav-links a:hover { border-color: #ff6b35; background: transparent; color: #ff6b35; }
+ .nav-links .cta-nav a { background: #ff6b35; color: #1a1a1a; border: 2px solid #ff6b35; }
+ .nav-links .cta-nav a:hover { background: transparent; color: #ff6b35; }
+ .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; background: none; border: none; padding: 8px; }
+ .hamburger span { display: block; width: 32px; height: 4px; background: #e5e5e5; border-radius: 0; }
+ #nav-toggle { display: none; }
+ 
+ /* HERO */
+ .hero {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ padding: 48px 24px;
+ margin-bottom: 80px;
+ align-items: center;
+ border-bottom: 4px solid #ff6b35;
+ }
+ .hero-content { position: relative; }
+ .hero-content h1 { color: #e5e5e5; text-shadow: 6px 6px 0 #ff6b35; }
+ .hero-content p { font-size: 1.3rem; margin-top: 1.5rem; border-left: 4px solid #ff6b35; padding-left: 20px; }
+ .hero-visual {
+ background: #2a2a2a;
+ border: 4px solid #ff6b35;
+ padding: 40px 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ transform: rotate(2deg);
+ min-height: 300px;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-visual::before {
+ content: '';
+ position: absolute;
+ top: -20px; left: -20px; right: -20px; bottom: -20px;
+ background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,107,53,0.05) 20px, rgba(255,107,53,0.05) 22px);
+ z-index: 0;
+ }
+ .hero-visual .big-number {
+ font-family: Impact, 'Arial Black', sans-serif;
+ font-size: clamp(5rem, 15vw, 10rem);
+ color: #ff6b35;
+ line-height: 1;
+ z-index: 1;
+ }
+ .hero-visual .label {
+ font-size: 1.5rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ color: #e5e5e5;
+ z-index: 1;
+ border-top: 4px solid #e5e5e5;
+ padding-top: 12px;
+ margin-top: 8px;
+ }
+ .hero-cta {
+ display: inline-block;
+ margin-top: 24px;
+ padding: 16px 40px;
+ background: #ff6b35;
+ color: #1a1a1a;
+ font-weight: 900;
+ font-size: 1.3rem;
+ text-transform: uppercase;
+ text-decoration: none;
+ border: 4px solid #e5e5e5;
+ transform: rotate(-1deg);
+ transition: 0.15s ease;
+ }
+ .hero-cta:hover { background: #e5e5e5; color: #1a1a1a; border-color: #ff6b35; transform: rotate(0deg); }
+ 
+ /* SECTION */
+ section { margin-bottom: 80px; padding: 0 24px; }
+ .section-header { margin-bottom: 40px; }
+ .section-header h2 { border-left-color: #ff6b35; }
+ 
+ /* BLOG POST CONTENT */
+ .blog-content {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ gap: 48px;
+ align-items: start;
+ }
+ .article-body { 
+ background: #222; 
+ padding: 32px; 
+ border: 4px solid #333;
+ position: relative;
+ }
+ .article-body::before {
+ content: '🔥';
+ position: absolute;
+ top: -18px; left: -18px;
+ font-size: 2rem;
+ transform: rotate(-15deg);
+ }
+ .article-body h2 { margin-top: 2rem; }
+ .article-body h3 { margin-top: 1.5rem; color: #ff6b35; }
+ .article-body p { margin-bottom: 1.2rem; color: #ccc; }
+ .article-body ul, .article-body ol { margin-bottom: 1.5rem; padding-left: 24px; color: #ccc; }
+ .article-body li { margin-bottom: 0.5rem; font-size: 1.1rem; }
+ .article-body strong { color: #ff6b35; }
+ .price-box {
+ background: #1a1a1a;
+ border: 4px solid #ff6b35;
+ padding: 24px;
+ margin: 24px 0;
+ transform: rotate(-1deg);
+ }
+ .price-box .price { font-size: 3rem; font-family: Impact, sans-serif; color: #ff6b35; line-height: 1; }
+ .price-box .price-sub { font-size: 1.2rem; color: #e5e5e5; }
+ .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+ .pros, .cons { padding: 20px; border: 4px solid; }
+ .pros { border-color: #00cc66; }
+ .cons { border-color: #ff3355; }
+ .pros h4, .cons h4 { margin-bottom: 12px; font-size: 1.5rem; }
+ 
+ .sidebar {
+ background: #222;
+ border: 4px solid #ff6b35;
+ padding: 24px;
+ position: sticky;
+ top: 100px;
+ }
+ .sidebar h3 { font-size: 1.8rem; margin-bottom: 20px; color: #ff6b35; }
+ .sidebar ul { list-style: none; }
+ .sidebar li { margin-bottom: 12px; border-bottom: 2px solid #333; padding-bottom: 12px; }
+ .sidebar a { color: #e5e5e5; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: block; }
+ .sidebar a:hover { color: #ff6b35; padding-left: 8px; }
+ .sidebar .phone-block {
+ margin-top: 24px;
+ padding: 20px;
+ background: #1a1a1a;
+ border: 4px solid #e5e5e5;
+ text-align: center;
+ }
+ .sidebar .phone-block a { font-size: 1.8rem; font-weight: 900; color: #ff6b35; text-decoration: none; }
+ .sidebar .phone-block a:hover { background: #ff6b35; color: #1a1a1a; padding-left: 0; }
+ 
+ /* UGC REVIEWS */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 32px;
+ margin-top: 40px;
+ }
+ .review-card {
+ background: #222;
+ border: 4px solid #e5e5e5;
+ padding: 24px;
+ transform: rotate(var(--rot, 0deg));
+ position: relative;
+ }
+ .review-card:nth-child(odd) { --rot: -1deg; }
+ .review-card:nth-child(even) { --rot: 1deg; }
+ .review-card .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+ .review-card .nickname { font-weight: 900; font-size: 1.2rem; color: #ff6b35; }
+ .review-card .date { font-size: 0.9rem; color: #888; }
+ .review-card .stars { color: #ff6b35; font-size: 1.4rem; letter-spacing: 2px; }
+ .review-card .review-text { color: #ccc; font-size: 1rem; line-height: 1.5; }
+ .review-card .review-tag { display: inline-block; background: #ff6b35; color: #1a1a1a; padding: 4px 12px; font-weight: 700; font-size: 0.8rem; margin-top: 12px; text-transform: uppercase; }
+ 
+ /* FOOTER */
+ footer {
+ border-top: 4px solid #ff6b35;
+ padding: 48px 24px;
+ margin-top: 40px;
+ background: #111;
+ }
+ .footer-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 32px;
+ max-width: 1400px;
+ margin: 0 auto;
+ }
+ .footer-col h4 { color: #ff6b35; font-size: 1.3rem; margin-bottom: 16px; }
+ .footer-col ul { list-style: none; }
+ .footer-col li { margin-bottom: 8px; }
+ .footer-col a { color: #999; text-decoration: none; }
+ .footer-col a:hover { color: #ff6b35; }
+ .copyright {
+ text-align: center;
+ padding-top: 32px;
+ margin-top: 32px;
+ border-top: 2px solid #333;
+ color: #666;
+ font-size: 0.9rem;
+ }
+ 
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .container { padding: 32px 16px; }
+ .hero { grid-template-columns: 1fr; gap: 24px; padding: 32px 16px; }
+ .hero-content h1 { text-shadow: 4px 4px 0 #ff6b35; }
+ .hero-visual { transform: rotate(0deg); min-height: 200px; padding: 24px; }
+ .blog-content { grid-template-columns: 1fr; }
+ .sidebar { position: static; margin-top: 32px; }
+ .pros-cons { grid-template-columns: 1fr; }
+ .reviews-grid { grid-template-columns: 1fr; }
+ .nav-links { 
+ display: none; 
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #1a1a1a;
+ flex-direction: column;
+ padding: 24px;
+ border-bottom: 4px solid #ff6b35;
+ gap: 16px;
+ }
+ .hamburger { display: flex; }
+ #nav-toggle:checked ~ .nav-links { display: flex; }
+ header { position: relative; }
+ .header-inner { position: relative; }
+ .brutal-skew, .brutal-skew-rev { transform: none; }
+ .price-box { transform: none; }
+ .article-body::before { display: none; }
+ }
+ 
+ @media (max-width: 480px) {
+ .hero-visual .big-number { font-size: 4rem; }
+ .hero-cta { padding: 12px 24px; font-size: 1rem; }
+ h1 { font-size: 2.5rem; }
+ h2 { font-size: 1.8rem; }
+ }
+ 
+ /* UTILITY */
+ .text-accent { color: #ff6b35; }
+ .bg-accent { background: #ff6b35; color: #1a1a1a; }
+ .mt-2 { margin-top: 32px; }
+ .mb-2 { margin-bottom: 32px; }
+ .gap-2 { gap: 32px; }
+ .flex { display: flex; }
+ .flex-wrap { flex-wrap: wrap; }
+ .items-center { align-items: center; }
+ .justify-between { justify-content: space-between; }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-123">
+  <meta property="og:description" content="sf-t3-1779642675702-123에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-123.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <div class="logo"><a href="/">마포주식</a></div>
+ <input type="checkbox" id="nav-toggle" hidden>
+ <label for="nav-toggle" class="hamburger" aria-label="메뉴 열기">
+ 
+ </label>
+ <ul class="nav-links">
+ <li><a href="/">홈</a></li>
+ <li><a href="/blog" style="color:#ff6b35;">블로그</a></li>
+ <li><a href="/tools">도구</a></li>
+ <li><a href="/community">커뮤니티</a></li>
+ 
+ </ul>
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-002-e2x1wf.html">SEO 오토파일럿 가격</a>
+        <p class="post-item__summary">최근 주식투자 분야에서도 온라인 검색 노출의 중요성이 커지면서 많은 투자 관련 업체들이 자동화된 검색 엔진 최적화 도구를 찾고 있습니다. 특히 마포 지역에서 활동하는 투자 상담이나 자문 업종의 경우</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0341.html">주식투자 업계도 주목하는 SEO 오토파일럿 가격, 마포에서의 실제 운영</a>
+        <p class="post-item__summary">주식투자 관련 콘텐츠를 운영하는 마포 지역의 업체들 사이에서 SEO 오토파일럿 가격에 대한 관심이 높아지고 있다. 자동화된 SEO 솔루션을 통해 키워드 순위를 유지하면서도 운영 부담을 줄일 수 있다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0342.html">SEO 오토파일럿 가격: 주식 투자자에게 주는 가치</a>
+        <p class="post-item__summary">주식 투자자에게 SEO 오토파일럿 가격은 바로 비용 대신 성장 가능성을 제시합니다. 자동 크롤링과 메타 태그 최적화가 투자 정보의 노출을 높여 주고, 그 효과는 수익률에 직접 연결됩니다. 일단 투자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0343.html">마포 주식투자 사이트가 알아야 할 SEO 오토파일럿 가격의 실제</a>
+        <p class="post-item__summary">주식투자 정보 사이트는 실시간 데이터와 분석 콘텐츠가 트래픽의 핵심 동력이다. 마포 지역에서 운영 중인 투자 플랫폼이라면 정확한 키워드 타기팅과 함께 SEO 자동화 도입을 고려하게 마련이다. 이때 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0344.html">SEO 오토파일럿 가격이 주식투자에게 끼치는 효율성</a>
+        <p class="post-item__summary">온라인 비즈니스에서 검색 엔진 최적화는 필수적이다. 주식투자에 관심이 많은 투자자들은 매출과 투자 회수율을 높이기 위해 SEO 전략을 적극 활용한다. 이를 통해 신규 고객 유입과 단기 투자 수익을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0345.html">주식투자 블로그 SEO 오토파일럿 가격, 선택 기준과 활용 전략</a>
+        <p class="post-item__summary">주식투자 관련 블로그나 사이트를 운영하다 보면 콘텐츠 최적화와 함께 꾸준한 검색 노출 관리가 필수적이다. 특히 마포처럼 특정 지역을 타겟으로 한 주식투자 정보 채널이라면 SEO 작업을 체계적으로 유</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0346.html">SEO 오토파일럿 가격과 마포 주식 투자자의 선택 포인트</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격에 대한 고민은 많은 투자자에게 중요한 이슈입니다. 자동화된 키워드 추적과 경쟁사 분석을 한 번에 제공해 주는 서비스는 비용 대비 가치를 크게 높입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0347.html">주식투자자를 위한 SEO 오토파일럿 가격, 진짜 필요한 투자일까</a>
+        <p class="post-item__summary">주식투자 업계에서 SEO 오토파일럿 도입이 빠르게 늘고 있다. 특히 마포 지역에 기반을 둔 투자 콘텐츠 채널들이 경쟁적으로 자동화 도입에 나서면서 가격 비교가 주요 관심사로 떠올랐다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0348.html">SEO 오토파일럿 가격, 스타트업의 비용 효율 향상 비결</a>
+        <p class="post-item__summary">스타트업이 매출을 늘리려면 검색 엔진 최적화가 필수이다. 하지만 전문 서비스에 비용을 내는 것이 부담스러운 경우가 많다. 그런 상황에서 SEO 오토파일럿 가격은 초기 투자 대비 높은 ROI를 제공한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0349.html">월 10만 원대 SEO 오토파일럿, 주식투자 사이트에 효과 있을까</a>
+        <p class="post-item__summary">주식투자 업계에서 온라인 채널의 중요성이 날로 커지고 있다. 개인 투자자들을 대상으로 한 정보 제공 사이트라면 검색 노출이 곧 방문자 수로 직결된다. 하지만 체계적인 전략 없이 단순히 키워드만 나열</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0350.html">SEO 오토파일럿 가격이 마포 주식투자에 미치는 실질적 가치</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격은 서비스 규모와 필요한 기능에 따라 달라진다. 일반적으로 월 단위 요금이 적용되며, 사용량이 늘어날수록 할인이 제공되는 경우가 많다. 초기 설정에는 무료 체험 기간이 포함되는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0351.html">마포 주식투자업계의 SEO 오토파일럿 가격, 어떻게 선택할까</a>
+        <p class="post-item__summary">주식투자 콘텐츠 사이트를 운영하는 마포 지역 업체들 사이에서 SEO 오토파일럿 도입이 늘고 있다. 경쟁이 치열해지면서 수작업으로는 감당하기 어려운 키워드 분석과 콘텐츠 배포를 자동화하려는 수요가 증</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0352.html">마포 주식투자자가 주목하는 SEO 오토파일럿 가격 가이드</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격은, 마포 지역별 주식투자자들이 효율적인 검색 최적화를 위해 선호하는 도구의 비용을 가리킵니다. 준비 단계에서 가장 큰 고민은 무료와 유료 구간의 차이이며, 이는 실제 검색량과</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0353.html">마포 주식투자자를 위한 SEO 오토파일럿 가격과 도입 전략</a>
+        <p class="post-item__summary">주식투자 업계에서 SEO 오토파일럿 도입이 빠르게 확산되고 있다. 특히 마포 지역에서 활동하는 투자 전문가들이 자동화된 SEO 솔루션을 통해 안정적인 온라인 트래픽을 확보하는 추세다. 반복 최적화 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0354.html">SEO 오토파일럿 가격 파헤치기</a>
+        <p class="post-item__summary">SEO 필수 마케팅은 오늘날 광고비를 크게 압박합니다. 오토파일럿 시스템을 도입하면 설정부터 최적화까지 자동화되어 인력 부담이 줄어든다. 그런 도구는 특히 복잡한 키워드 집단을 빠르게 처리해 주는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0355.html">SEO 오토파일럿 가격 책정, 마포 주식투자 사이트 운영자가 알아둘 점</a>
+        <p class="post-item__summary">주식투자 관련 정보를 제공하는 사이트는 검색 유입에 대한 의존도가 높은 편이다. 마포 지역에서 운영되는 사이트라면 더욱 세밀한 SEO 접근이 요구된다. 이런 배경에서 SEO 오토파일럿 도입을 고려하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0356.html">마포 주식투자자가 알아야 할 SEO 오토파일럿 가격과 그 가치</a>
+        <p class="post-item__summary">주식투자를 통해 부동산 시장에 진입하려는 투자자라면 SEO 오토파일럿 가격을 눈여겨 보는 것이 필수적이다. 이 서비스는 검색엔진 최적화를 자동으로 진행해 주고, 특히 마포 지역의 혼잡한 온라인 경쟁</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0357.html">주식투자 병행하며 마포에서 시작하는 SEO 오토파일럿 가격 비교</a>
+        <p class="post-item__summary">주식투자를 병행하며 시간을 효율적으로 쓰려는 마포 지역 독자들 사이에서 SEO 오토파일럿에 대한 관심이 꾸준히 늘고 있다. 직접 모든 SEO 작업을 수동으로 처리하려면 상당한 시간이 소요되지만, 자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1378.html">SEO 오토파일럿 가격 흐름과 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호 연결 메모</a>
+        <p class="post-item__summary">마포의 SEO 오토파일럿 가격 정보는 단순 목록보다 맥락이 중요합니다. 어떤 상황에서 필요한 정보인지 먼저 정하면 검색 결과를 훨씬 덜 흔들리게 읽을 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0286.html">SEO 오토파일럿 가격 비교를 통한 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">디지털 마케팅 영역에서 SEO 오토파일럿 가격 설정은 서비스의 범위를 결정짓는 중요한 지표가 됩니다. 비용을 기준으로 선택지를 대조할 때, 단순히 저렴한 도구만을 고집하기보다 투자 대비 효율성을 검</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
